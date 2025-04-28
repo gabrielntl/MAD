@@ -1,15 +1,14 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Header, TextInput } from '../../components/molecules/';
-import { Button, Gap } from '../../components/atoms/';
-import AddPhoto from '../../components/atoms/AddPhoto/AddPhoto'; // Tambahkan import ini
+import {StyleSheet, View} from 'react-native';
+import {Header, TextInput} from '../../components/molecules';
+import {Button, Gap, AddPhoto} from '../../components/atoms';
 
-const SignIn = () => {
+
+const SignUp = () => {
   return (
     <View style={styles.pageContainer}>
       <Header title="Sign Up" onBack={() => console.log('Go back')} />
       <View style={styles.contentContainer}>
-
         {/* Add Photo */}
         <View style={styles.photoContainer}>
           <AddPhoto />
@@ -18,30 +17,23 @@ const SignIn = () => {
         <Gap height={24} />
 
         {/* Input Fields */}
-        <TextInput
-          label="Full Name"
-          placeholder="Type your full name"
-        />
+        <TextInput label="Full Name" placeholder="Type your full name" />
         <Gap height={16} />
         <TextInput
           label="Email Address"
           placeholder="Type your email address"
         />
         <Gap height={16} />
-        <TextInput
-          label="Password"
-          placeholder="Type your password"
-        />
+        <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
         <Button label="Continue" />
         <Gap height={12} />
-
       </View>
     </View>
   );
 };
 
-export default SignIn;
+export default SignUp;
 
 const styles = StyleSheet.create({
   pageContainer: {
@@ -56,6 +48,6 @@ const styles = StyleSheet.create({
   },
   photoContainer: {
     alignItems: 'center',
-    marginTop: -115
+    marginTop: -115,
   },
 });
